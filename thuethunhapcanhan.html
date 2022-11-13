@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+  let a= +prompt("nhập tiền lương (đơn vị triệu vnd:");
+  if (a <= 5) alert("miễn thuế");
+    else {if (a<=10) alert("thuế phải đóng là:"+(a-5)*(5/100));
+            else {
+                if (a<=20) alert("thuế phải đóng là:"+(5*(5/100)+(a-10)*(6/100)));
+                    else {
+                    alert("thuế phải đóng là:"+(5*(5/100)+10*(6/100)+(a-20)*(8/100)));
+                }
+  }
+    }
+</script>
+</body>
+</html>

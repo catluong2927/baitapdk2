@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lãi suất ngân hàng</title>
+</head>
+<body>
+<script>
+  let a= +prompt("nhập số tiền gửi:");
+  let b= +prompt("nhập số tháng muốn gửi:");
+  let thang03 = 6/100;
+  let thang06 = 6.4/100;
+  let thang09 = 6.7/100;
+  let thang12 = 8.8/100;
+  if (b<=3) alert("tổng số tiền sau khi đáo hạn là:"+a*(1+thang03));
+    else {
+      if (a>3 && b<=6) alert("tổng số tiền sau khi đáo hạn là:"+a*(1+thang06));
+        else {
+          if (a>6 && b<=9) alert("tổng số tiền sau khi đáo hạn là:"+a*(1+thang09));
+            else {
+              if(a>9 && b<=12) alert("tổng số tiền sau khi đáo hạn là:"+a*(1+thang12));
+                else {
+                  let tong=a*(1+thang12);
+                  let i=12
+                  while ((b-i)>=12) {
+                    tong= tong*(1+thang12);
+                    i=i+12;
+                  }
+                alert("tổng số tiền sau khi đáo hạn là:"+tong)
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
